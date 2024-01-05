@@ -1,0 +1,45 @@
+.container {
+  /* border: 1px solid black; */
+}
+.quizText {
+  font-size: 50px;
+  letter-spacing: 10px;
+  color: grey;
+  text-shadow: 3px 3px 1px black;
+  text-align: center;
+}
+.quesNumber {
+  font-size: 30px;
+  text-align: center;
+}
+.quesLength {
+  font-size: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.quesText {
+  font-size: 40px;
+  text-align: center;
+}
+.ansbtn {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
+  justify-content: space-evenly;
+}
+button {
+  border-color: black;
+  width: 300px;
+  border-radius: 30px;
+  color: grey;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+button:hover {
+  box-shadow: 5px 5px;
+}
+.resultText {
+  font-size: 30px;
+  text-align: center;
+}

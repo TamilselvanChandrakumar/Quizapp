@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Quiz.css";
 
 const Quiz = () => {
   const questions = [
@@ -104,30 +105,41 @@ const Quiz = () => {
   };
   return (
     <>
-      <h2>Quiz</h2>
-      {showscore ? (
-        <>
-          <div>
-            you scored {score} out of {questions.length}
-          </div>
-        </>
-      ) : (
-        <>
-          <div>
-            Quesiton {currentQuestion + 1} {questions.length}
-          </div>
-          <div>{questions[currentQuestion].questiontext}</div>
-          <div>
-            {questions[currentQuestion].answerOptions.map((answerOptions) => (
-              <button
-                onClick={() => handleAnswerButtonClick(answerOptions.isCorrect)}
-              >
-                {answerOptions.answerText}
-              </button>
-            ))}
-          </div>
-        </>
-      )}
+      <div className="container">
+        <h2 className="quizText">Quiz</h2>
+        <div>
+          {showscore ? (
+            <>
+              <div className="resultText">
+                you scored {score} out of {questions.length}
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="quesNumber">
+                Question {currentQuestion + 1}{" "}
+                <span className="quesLength">{questions.length}</span>
+              </div>
+              <div className="quesText">
+                {questions[currentQuestion].questiontext}
+              </div>
+              <div className="ansbtn">
+                {questions[currentQuestion].answerOptions.map(
+                  (answerOptions) => (
+                    <button
+                      onClick={() =>
+                        handleAnswerButtonClick(answerOptions.isCorrect)
+                      }
+                    >
+                      {answerOptions.answerText}
+                    </button>
+                  )
+                )}
+              </div>
+            </>
+          )}
+        </div>
+      </div>
     </>
   );
 };
